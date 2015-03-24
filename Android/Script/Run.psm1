@@ -11,10 +11,10 @@ function start-emulator {
 }
 # Installs the apps and connects the agent to the sockets server.
  function install-connect-apps {
- 	# Install the Mobile Testing agent app.
+ 	# Install the Mobile Testing agent app. Change the path to a local store or online repository.
 	adb -s emulator-5554 install -r "Android\Apps\MobileTesting-Android.apk"
 	start-sleep -s 10
-	# Install the app to test.
+	# Install the app to test. Change the path to a local store or online repository.
 	adb -s emulator-5554 install -r "Android\Apps\DemoApplicationTesting.apk"
 	start-sleep -s 10
 	# Start the Mobile Testing agent app.
