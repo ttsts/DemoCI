@@ -19,9 +19,10 @@ function start-emulator {
 
 function run-tests{
 	Set-Location -Path "Android\tests\"
-	tmtest --sockets-server-address localhost:8088 -m buttonsSpec -o ..\results.json
+	tmtest --sockets-server-address localhost:8088 -o ..\results.json
 	If($LASTEXITCODE -ne 0)
 	{
+		stop-emulator
 		exit 1
 	}
 	start-sleep -s 10
