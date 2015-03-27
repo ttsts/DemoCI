@@ -3,7 +3,7 @@
 # Starts the Emulator.
 function start-emulator {
 	# Start an android Emulator.
-	emulator -avd Emulator442
+	emulator -avd Emulator51
 	# Wait 2 minutes for the Emulator to load up. Adjust this time depending on the emulator version.
 	start-sleep -s 120
 	# Call the function that installs the agent and app to test.
